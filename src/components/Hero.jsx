@@ -3,14 +3,16 @@ import heroImg from "../assets/hero.jpg";
 export default function Hero() {
   return (
     <section
+      id="hero"
       style={{
-        height: "100vh",
+        minHeight: "100vh",
         width: "100%",
+        marginTop: "100px", // 🔥 compensação do header fixo
         backgroundImage: `url(${heroImg})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
-        backgroundAttachment: "fixed", // efeito premium estilo Shutterstock
+        backgroundAttachment: "scroll", // 🔥 mobile-safe
         position: "relative",
         display: "flex",
         justifyContent: "center",
@@ -18,13 +20,13 @@ export default function Hero() {
         padding: "0 20px",
       }}
     >
-      {/* Overlay escuro elegante */}
+      {/* Overlay escuro */}
       <div
         style={{
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.75))",
+            "linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.85))",
         }}
       />
 
@@ -34,11 +36,12 @@ export default function Hero() {
           zIndex: 2,
           maxWidth: "900px",
           textAlign: "center",
+          padding: "0 10px",
         }}
       >
         <h1
           style={{
-            fontSize: "72px",
+            fontSize: "64px",
             fontWeight: "900",
             lineHeight: "1.1",
             color: "#fff",
@@ -52,7 +55,7 @@ export default function Hero() {
         <p
           style={{
             marginTop: "25px",
-            fontSize: "26px",
+            fontSize: "24px",
             color: "#f1f1f1",
             textShadow: "0 4px 20px rgba(0,0,0,0.6)",
           }}
@@ -61,7 +64,7 @@ export default function Hero() {
           querem crescer nas redes sociais.
         </p>
 
-        {/* Barra de busca estilo Shutterstock */}
+        {/* BARRA DE BUSCA */}
         <div
           style={{
             marginTop: "45px",

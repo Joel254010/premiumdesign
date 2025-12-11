@@ -8,6 +8,7 @@ export default function Header() {
     <>
       {/* HEADER */}
       <header
+        className="header"
         style={{
           position: "fixed",
           top: 0,
@@ -27,6 +28,7 @@ export default function Header() {
         <img
           src={logoFull}
           alt="PremiumDesign"
+          className="logo-header"
           style={{
             height: "90px",
             objectFit: "contain",
@@ -34,32 +36,20 @@ export default function Header() {
         />
 
         {/* MENU DESKTOP */}
-        <nav
-          className="menu-desktop"
-          style={{ display: "flex", gap: "32px", alignItems: "center" }}
-        >
-          <a href="#samples" style={{ color: "#fff", fontSize: "18px" }}>
-            Exemplos
-          </a>
-          <a href="#categories" style={{ color: "#fff", fontSize: "18px" }}>
-            Categorias
-          </a>
-          <a href="#about" style={{ color: "#fff", fontSize: "18px" }}>
-            Quem Somos
-          </a>
-          <a href="#benefits" style={{ color: "#fff", fontSize: "18px" }}>
-            Importância
-          </a>
+        <nav className="menu-desktop" style={{ display: "flex", gap: "32px", alignItems: "center" }}>
+          <a href="#samples" style={{ color: "#fff", fontSize: "18px" }}>Exemplos</a>
+          <a href="#categories" style={{ color: "#fff", fontSize: "18px" }}>Categorias</a>
+          <a href="#about" style={{ color: "#fff", fontSize: "18px" }}>Quem Somos</a>
+          <a href="#benefits" style={{ color: "#fff", fontSize: "18px" }}>Importância</a>
         </nav>
 
-        {/* BOTÃO MOBILE (Hambúrguer) */}
+        {/* BOTÃO MOBILE */}
         <div
           className="mobile-menu-button"
           onClick={() => setMenuOpen(true)}
           style={{
             width: "38px",
             height: "32px",
-            display: "none", // aparece no mobile via CSS
             flexDirection: "column",
             justifyContent: "space-between",
             cursor: "pointer",
@@ -73,7 +63,6 @@ export default function Header() {
 
       {/* MENU MOBILE LATERAL */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        {/* Botão Fechar */}
         <button
           onClick={() => setMenuOpen(false)}
           style={{
@@ -90,19 +79,10 @@ export default function Header() {
           ×
         </button>
 
-        {/* LINKS MOBILE */}
-        <a href="#samples" onClick={() => setMenuOpen(false)}>
-          Exemplos
-        </a>
-        <a href="#categories" onClick={() => setMenuOpen(false)}>
-          Categorias
-        </a>
-        <a href="#about" onClick={() => setMenuOpen(false)}>
-          Quem Somos
-        </a>
-        <a href="#benefits" onClick={() => setMenuOpen(false)}>
-          Importância
-        </a>
+        <a href="#samples" onClick={() => setMenuOpen(false)}>Exemplos</a>
+        <a href="#categories" onClick={() => setMenuOpen(false)}>Categorias</a>
+        <a href="#about" onClick={() => setMenuOpen(false)}>Quem Somos</a>
+        <a href="#benefits" onClick={() => setMenuOpen(false)}>Importância</a>
       </div>
     </>
   );

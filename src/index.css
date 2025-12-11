@@ -34,9 +34,9 @@ body {
 /* ---------------------------- */
 /* 🔥 AJUSTES GLOBAIS MOBILE   */
 /* ---------------------------- */
+
 @media (max-width: 480px) {
 
-  /* Remove grandes margens Vite padrão */
   body {
     padding: 0 !important;
     margin: 0 !important;
@@ -44,35 +44,42 @@ body {
     min-height: 100vh;
   }
 
-  /* Ajustar root */
   #root {
     padding: 0 !important;
   }
 
-  /* Header fixo e fino */
+  /* HEADER — Ajuste real para resolver o problema do topo */
   header {
-    padding: 10px 20px !important;
+    padding: 6px 16px !important;
+    height: 70px !important;
+    display: flex !important;
+    align-items: center !important;
   }
 
   header img {
-    height: 60px !important;
+    height: 48px !important;
   }
 
-  header nav {
-    gap: 12px !important;
+  /* Desktop menu some */
+  .menu-desktop {
+    display: none !important;
   }
 
-  header nav a {
-    font-size: 14px !important;
+  /* Botão mobile aparece */
+  .mobile-menu-button {
+    display: flex !important;
+    position: relative;
+    z-index: 2000; /* GARANTE QUE FICA NA FRENTE */
   }
 
-  /* HERO */
-  section {
-    text-align: center;
+  /* HERO — Impede quebra, zoom e texto estourado */
+  #hero {
+    margin-top: 80px !important; /* Compensa header fixo */
   }
 
   #hero h1 {
-    font-size: 32px !important;
+    font-size: 34px !important;
+    line-height: 1.2 !important;
     padding: 0 15px;
   }
 
@@ -81,7 +88,6 @@ body {
     padding: 0 20px;
   }
 
-  /* Barra de busca */
   #hero input {
     font-size: 16px !important;
     padding: 12px !important;
@@ -92,7 +98,7 @@ body {
     padding: 12px 20px !important;
   }
 
-  /* Categorias - grid compacto */
+  /* CATEGORIAS */
   #categories {
     padding: 60px 20px !important;
   }
@@ -106,7 +112,7 @@ body {
     font-size: 30px !important;
   }
 
-  /* Samples - grid adaptado */
+  /* SAMPLES */
   #samples {
     padding: 40px 20px !important;
   }
@@ -116,13 +122,8 @@ body {
   }
 
   #samples div img {
-    height: 250px !important;
-  }
-
-  /* Botões de filtro */
-  #samples button {
-    padding: 10px 16px !important;
-    font-size: 14px !important;
+    height: 230px !important;
+    object-fit: cover;
   }
 
   /* About */
@@ -161,29 +162,17 @@ body {
     padding: 14px 24px !important;
   }
 
-  /* Footer */
   footer {
     padding: 30px 20px !important;
     font-size: 14px;
   }
 }
 
+
 /* ---------------------------- */
-/* 🔥 MENU MOBILE               */
+/* 🔥 MENU MOBILE — slide suave */
 /* ---------------------------- */
 
-/* Esconde nav desktop no mobile */
-@media (max-width: 480px) {
-  .menu-desktop {
-    display: none !important;
-  }
-
-  .mobile-menu-button {
-    display: flex !important;
-  }
-}
-
-/* MENU LATERAL */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -195,7 +184,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  transition: 0.3s ease;
+  transition: right 0.3s ease;
   z-index: 3000;
   border-left: 1px solid rgba(255,255,255,0.1);
 }
