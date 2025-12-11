@@ -1,0 +1,213 @@
+/* ---------------------------- */
+/* 🔥 RESET / BASE DO SITE     */
+/* ---------------------------- */
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background: #000;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Fonte global */
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #fff;
+  background: #000;
+}
+
+
+/* ---------------------------- */
+/* 🔥 AJUSTES GLOBAIS MOBILE   */
+/* ---------------------------- */
+@media (max-width: 480px) {
+
+  /* Remove grandes margens Vite padrão */
+  body {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block;
+    min-height: 100vh;
+  }
+
+  /* Ajustar root */
+  #root {
+    padding: 0 !important;
+  }
+
+  /* Header fixo e fino */
+  header {
+    padding: 10px 20px !important;
+  }
+
+  header img {
+    height: 60px !important;
+  }
+
+  header nav {
+    gap: 12px !important;
+  }
+
+  header nav a {
+    font-size: 14px !important;
+  }
+
+  /* HERO */
+  section {
+    text-align: center;
+  }
+
+  #hero h1 {
+    font-size: 32px !important;
+    padding: 0 15px;
+  }
+
+  #hero p {
+    font-size: 18px !important;
+    padding: 0 20px;
+  }
+
+  /* Barra de busca */
+  #hero input {
+    font-size: 16px !important;
+    padding: 12px !important;
+  }
+
+  #hero button {
+    font-size: 16px !important;
+    padding: 12px 20px !important;
+  }
+
+  /* Categorias - grid compacto */
+  #categories {
+    padding: 60px 20px !important;
+  }
+
+  #categories div {
+    font-size: 18px !important;
+    padding: 18px !important;
+  }
+
+  #categories h2 {
+    font-size: 30px !important;
+  }
+
+  /* Samples - grid adaptado */
+  #samples {
+    padding: 40px 20px !important;
+  }
+
+  #samples h2 {
+    font-size: 30px !important;
+  }
+
+  #samples div img {
+    height: 250px !important;
+  }
+
+  /* Botões de filtro */
+  #samples button {
+    padding: 10px 16px !important;
+    font-size: 14px !important;
+  }
+
+  /* About */
+  #about {
+    padding: 60px 20px !important;
+  }
+
+  #about h2 {
+    font-size: 32px !important;
+  }
+
+  #about p {
+    font-size: 18px !important;
+  }
+
+  /* Benefits */
+  #benefits {
+    padding: 60px 20px !important;
+  }
+
+  /* CTA */
+  #cta {
+    padding: 60px 20px !important;
+  }
+
+  #cta h2 {
+    font-size: 32px !important;
+  }
+
+  #cta p {
+    font-size: 18px !important;
+  }
+
+  #cta a {
+    font-size: 20px !important;
+    padding: 14px 24px !important;
+  }
+
+  /* Footer */
+  footer {
+    padding: 30px 20px !important;
+    font-size: 14px;
+  }
+}
+
+/* ---------------------------- */
+/* 🔥 MENU MOBILE               */
+/* ---------------------------- */
+
+/* Esconde nav desktop no mobile */
+@media (max-width: 480px) {
+  .menu-desktop {
+    display: none !important;
+  }
+
+  .mobile-menu-button {
+    display: flex !important;
+  }
+}
+
+/* MENU LATERAL */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100%;
+  background: #111;
+  padding: 80px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  transition: 0.3s ease;
+  z-index: 3000;
+  border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
