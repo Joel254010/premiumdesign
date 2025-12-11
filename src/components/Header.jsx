@@ -6,6 +6,7 @@ export default function Header() {
 
   return (
     <>
+      {/* HEADER */}
       <header
         style={{
           position: "fixed",
@@ -33,21 +34,32 @@ export default function Header() {
         />
 
         {/* MENU DESKTOP */}
-        <nav className="menu-desktop" style={{ display: "flex", gap: "32px", alignItems: "center" }}>
-          <a href="#samples" style={{ color: "#fff", fontSize: "18px" }}>Exemplos</a>
-          <a href="#categories" style={{ color: "#fff", fontSize: "18px" }}>Categorias</a>
-          <a href="#about" style={{ color: "#fff", fontSize: "18px" }}>Quem Somos</a>
-          <a href="#benefits" style={{ color: "#fff", fontSize: "18px" }}>Importância</a>
+        <nav
+          className="menu-desktop"
+          style={{ display: "flex", gap: "32px", alignItems: "center" }}
+        >
+          <a href="#samples" style={{ color: "#fff", fontSize: "18px" }}>
+            Exemplos
+          </a>
+          <a href="#categories" style={{ color: "#fff", fontSize: "18px" }}>
+            Categorias
+          </a>
+          <a href="#about" style={{ color: "#fff", fontSize: "18px" }}>
+            Quem Somos
+          </a>
+          <a href="#benefits" style={{ color: "#fff", fontSize: "18px" }}>
+            Importância
+          </a>
         </nav>
 
-        {/* BOTÃO DE MENU MOBILE */}
+        {/* BOTÃO MOBILE (Hambúrguer) */}
         <div
           className="mobile-menu-button"
           onClick={() => setMenuOpen(true)}
           style={{
             width: "38px",
             height: "32px",
-            display: "none", // só aparece no mobile via CSS
+            display: "none", // aparece no mobile via CSS
             flexDirection: "column",
             justifyContent: "space-between",
             cursor: "pointer",
@@ -61,7 +73,7 @@ export default function Header() {
 
       {/* MENU MOBILE LATERAL */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        {/* Botão fechar */}
+        {/* Botão Fechar */}
         <button
           onClick={() => setMenuOpen(false)}
           style={{
@@ -78,11 +90,19 @@ export default function Header() {
           ×
         </button>
 
-        {/* Links do menu mobile */}
-        <a href="#samples" onClick={() => setMenuOpen(false)}>Exemplos</a>
-        <a href="#categories" onClick={() => setMenuOpen(false)}>Categorias</a>
-        <a href="#about" onClick={() => setMenuOpen(false)}>Quem Somos</a>
-        <a href="#benefits" onClick={() => setMenuOpen(false)}>Importância</a>
+        {/* LINKS MOBILE */}
+        <a href="#samples" onClick={() => setMenuOpen(false)}>
+          Exemplos
+        </a>
+        <a href="#categories" onClick={() => setMenuOpen(false)}>
+          Categorias
+        </a>
+        <a href="#about" onClick={() => setMenuOpen(false)}>
+          Quem Somos
+        </a>
+        <a href="#benefits" onClick={() => setMenuOpen(false)}>
+          Importância
+        </a>
       </div>
     </>
   );
